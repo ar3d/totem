@@ -11,17 +11,22 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-<model-viewer src="totem_PARS_ok.glb" camera-controls ar ar-modes="webxr">
-          
-      <button slot="ar-button" id="ar-button">
-          Mostra nello spazio
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-          </model-viewer> 
+<model-viewer bounds="tight" enable-pan src="totem_PARS_ok.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
     <script src="script.js"></script>
    
 
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </html>
+	
+	
